@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2013 Skyline Software (http://extstore.com). All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+-->
+<extension type="module" version="1.7" client="site" method="upgrade">
+	<name>Skyline Facebook FanBox</name>
+	<author>Pham Minh Tuan</author>
+	<creationDate>December 2011</creationDate>
+	<copyright>Copyright (c) 2013 Skyline. All rights reserved.</copyright>
+	<authorEmail> (admin@extstore.com)</authorEmail>
+	<authorUrl>http://extstore.com</authorUrl>
+	<version>1.5.0</version>
+	<description>
+	<![CDATA[
+		Skyline Facebook FanBox Module for Joomla 1.7<br /><br />Developed by Skyline Software (<a target="_blank" href="http://extstore.com">http://extstore.com</a>).
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_sl_fbfanbox">mod_sl_fbfanbox.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_sl_fbfanbox.ini</language>
+		<language tag="en-GB">en-GB.mod_sl_fbfanbox.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+				/>
+
+				<field
+					name="page_id"
+					type="text"
+					default=""
+					label="MOD_SL_FBFANBOX_PAGE_ID_LABEL"
+					description="MOD_SL_FBFANBOX_PAGE_ID_DESC"
+				/>
+
+				<field
+					name="stream"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_SL_FBFANBOX_STREAM_LABEL"
+					description="MOD_SL_FBFANBOX_STREAM_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNo</option>
+				</field>
+
+				<field
+					name="connections"
+					type="text"
+					default="10"
+					label="MOD_SL_FBFANBOX_CONNECTIONS_LABEL"
+					description="MOD_SL_FBFANBOX_CONNECTIONS_DESC"
+				/>
+
+				<field
+					name="show_faces"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_SL_FBFANBOX_SHOW_FACES_LABEL"
+					description="MOD_SL_FBFANBOX_SHOW_FACES_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNo</option>
+				</field>
+
+				<field
+					name="language"
+					type="list"
+					default="iframe"
+					label="MOD_SL_FBFANBOX_LANGUAGE_LABEL"
+					description="MOD_SL_FBFANBOX_LANGUAGE_DESC"
+				>
+					<option value="default">Your Global Language</option>
+					<option value="browser">Browser Language</option>
+					<option value="af_ZA">Afrikaans</option>
+					<option value="sq_AL">Albanian</option>
+					<option value="ar_AR">Arabic</option>
+					<option value="hy_AM">Armenian</option>
+					<option value="ay_BO">Aymara</option>
+					<option value="az_AZ">Azeri</option>
+					<option value="eu_ES">Basque</option>
+					<option value="be_BY">Belarusian</option>
+					<option value="bn_IN">Bengali</option>
+					<option value="bs_BA">Bosnian</option>
+					<option value="bg_BG">Bulgarian</option>
+					<option value="ca_ES">Catalan</option>
+					<option value="ck_US">Cherokee</option>
+					<option value="hr_HR">Croatian</option>
+					<option value="cs_CZ">Czech</option>
+					<option value="da_DK">Danish</option>
+					<option value="nl_NL">Dutch</option>
+					<option value="nl_BE">Dutch (België)</option>
+					<option value="en_PI">English (Pirate)</option>
+					<option value="en_GB">English (UK)</option>
+					<option value="en_UD">English (Upside Down)</option>
+					<option value="en_US">English (US)</option>
+					<option value="eo_EO">Esperanto</option>
+					<option value="et_EE">Estonian</option>
+					<option value="fo_FO">Faroese</option>
+					<option value="tl_PH">Filipino</option>
+					<option value="fi_FI">Finnish</option>
+					<option value="fb_FI">Finnish (test)</option>
+					<option value="fr_CA">French (Canada)</option>
+					<option value="fr_FR">French (France)</option>
+					<option value="gl_ES">Galician</option>
+					<option value="ka_GE">Georgian</option>
+					<option value="de_DE">German</option>
+					<option value="el_GR">Greek</option>
+					<option value="gn_PY">Guaraní</option>
+					<option value="gu_IN">Gujarati</option>
+					<option value="he_IL">Hebrew</option>
+					<option value="hi_IN">Hindi</option>
+					<option value="hu_HU">Hungarian</option>
+					<option value="is_IS">Icelandic</option>
+					<option value="id_ID">Indonesian</option>
+					<option value="ga_IE">Irish</option>
+					<option value="it_IT">Italian</option>
+					<option value="ja_JP">Japanese</option>
+					<option value="jv_ID">Javanese</option>
+					<option value="kn_IN">Kannada</option>
+					<option value="kk_KZ">Kazakh</option>
+					<option value="km_KH">Khmer</option>
+					<option value="tl_ST">Klingon</option>
+					<option value="ko_KR">Korean</option>
+					<option value="ku_TR">Kurdish</option>
+					<option value="la_VA">Latin</option>
+					<option value="lv_LV">Latvian</option>
+					<option value="fb_LT">Leet Speak</option>
+					<option value="li_NL">Limburgish</option>
+					<option value="lt_LT">Lithuanian</option>
+					<option value="mk_MK">Macedonian</option>
+					<option value="mg_MG">Malagasy</option>
+					<option value="ms_MY">Malay</option>
+					<option value="ml_IN">Malayalam</option>
+					<option value="mt_MT">Maltese</option>
+					<option value="mr_IN">Marathi</option>
+					<option value="mn_MN">Mongolian</option>
+					<option value="ne_NP">Nepali</option>
+					<option value="se_NO">Northern Sámi</option>
+					<option value="nb_NO">Norwegian (bokmal)</option>
+					<option value="nn_NO">Norwegian (nynorsk)</option>
+					<option value="ps_AF">Pashto</option>
+					<option value="fa_IR">Persian</option>
+					<option value="pl_PL">Polish</option>
+					<option value="pt_BR">Portuguese (Brazil)</option>
+					<option value="pt_PT">Portuguese (Portugal)</option>
+					<option value="pa_IN">Punjabi</option>
+					<option value="qu_PE">Quechua</option>
+					<option value="ro_RO">Romanian</option>
+					<option value="rm_CH">Romansh</option>
+					<option value="ru_RU">Russian</option>
+					<option value="sa_IN">Sanskrit</option>
+					<option value="sr_RS">Serbian</option>
+					<option value="zh_CN">Simplified Chinese (China)</option>
+					<option value="sk_SK">Slovak</option>
+					<option value="sl_SI">Slovenian</option>
+					<option value="so_SO">Somali</option>
+					<option value="es_LA">Spanish</option>
+					<option value="es_CL">Spanish (Chile)</option>
+					<option value="es_CO">Spanish (Colombia)</option>
+					<option value="es_MX">Spanish (Mexico)</option>
+					<option value="es_ES">Spanish (Spain)</option>
+					<option value="es_VE">Spanish (Venezuela)</option>
+					<option value="sw_KE">Swahili</option>
+					<option value="sv_SE">Swedish</option>
+					<option value="sy_SY">Syriac</option>
+					<option value="tg_TJ">Tajik</option>
+					<option value="ta_IN">Tamil</option>
+					<option value="tt_RU">Tatar</option>
+					<option value="te_IN">Telugu</option>
+					<option value="th_TH">Thai</option>
+					<option value="zh_HK">Traditional Chinese (Hong Kong)</option>
+					<option value="zh_TW">Traditional Chinese (Taiwan)</option>
+					<option value="tr_TR">Turkish</option>
+					<option value="uk_UA">Ukrainian</option>
+					<option value="ur_PK">Urdu</option>
+					<option value="uz_UZ">Uzbek</option>
+					<option value="vi_VN">Vietnamese</option>
+					<option value="cy_GB">Welsh</option>
+					<option value="xh_ZA">Xhosa</option>
+					<option value="yi_DE">Yiddish</option>
+					<option value="zu_ZA">Zulu</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="width"
+					type="text"
+					default="200"
+					label="MOD_SL_FBFANBOX_WIDTH_LABEL"
+					description="MOD_SL_FBFANBOX_WIDTH_DESC"
+				/>
+
+				<field
+					name="height"
+					type="text"
+					default="400"
+					label="MOD_SL_FBFANBOX_HEIGHT_LABEL"
+					description="MOD_SL_FBFANBOX_HEIGHT_DESC"
+				/>
+
+				<field
+					name="color_scheme"
+					type="list"
+					default="light"
+					label="MOD_SL_FBFANBOX_COLOR_SCHEME_LABEL"
+					description="MOD_SL_FBFANBOX_COLOR_SCHEME_DESC"
+				>
+					<option value="dark">Dark</option>
+					<option value="light">Light</option>
+				</field>
+
+				<field
+					name="border_color"
+					type="text"
+					default=""
+					label="MOD_SL_FBFANBOX_BORDER_COLOR_LABEL"
+					description="MOD_SL_FBFANBOX_BORDER_COLOR_DESC"
+				/>
+
+				<field
+					name="show_header"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_SL_FBFANBOX_SHOW_HEADER_LABEL"
+					description="MOD_SL_FBFANBOX_SHOW_HEADER_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNo</option>
+				</field>
+
+				<field
+					name="show_scrollbar"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_SL_FBFANBOX_SHOW_SCROLLBAR_LABEL"
+					description="MOD_SL_FBFANBOX_SHOW_SCROLLBAR_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNo</option>
+				</field>
+
+				<field
+					name="frame_border"
+					type="text"
+					default=""
+					label="MOD_SL_FBFANBOX_FRAME_BORDER_LABEL"
+					description="MOD_SL_FBFANBOX_FRAME_BORDER_DESC"
+				/>
+
+				<field
+					name="enable_custom_css"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_SL_FBFANBOX_ENABLE_CUSTOM_CSS_LABEL"
+					description="MOD_SL_FBFANBOX_ENABLE_SHOW_CUSTOM_CSS_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNo</option>
+				</field>
+
+				<field
+					name="custom_css"
+					type="textarea"
+					default=""
+					label="MOD_SL_FBFANBOX_CUSTOM_CSS_LABEL"
+					description="MOD_SL_FBFANBOX_CUSTOM_CSS_DESC"
+					rows="10"
+					cols="40"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

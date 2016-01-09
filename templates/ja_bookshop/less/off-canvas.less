@@ -1,0 +1,232 @@
+/**
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org
+ * @credits       Mary Lou - http://tympanus.net/codrops/2013/08/28/transitions-for-off-canvas-navigations/
+ *------------------------------------------------------------------------------
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/off-canvas.less";
+
+
+
+//
+// OFF-CANVAS
+// -------------------------------------
+
+// Toggle Button
+// -------------------
+.off-canvas-toggle {
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  top: 20px;
+  left: 15px;
+  position: absolute;
+  background: none;
+  border: 1px solid rgba(255,255,255,.6);
+  color: @white;
+
+  &:hover,
+  &:focus, 
+  &:active {
+    border-color: rgba(255,255,255,1);
+    background: none;
+    outline: none;
+    color: @white;
+  }
+
+  @media (max-width: @screen-sm) {
+    top: 25px;
+    left: 20px;
+  }
+}
+
+.off-canvas-open {
+  .t3-wrapper:after {
+    .opacity(0.7);
+    background: @black;
+  }
+
+  .t3-header {
+    .off-canvas-toggle {
+      &:hover,
+      &:focus, 
+      &:active {
+        border: 1px solid rgba(255,255,255,.6);
+      }
+    }
+  }
+}
+
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+.t3-off-canvas {
+
+  // Generic
+  // -----------------------------------
+  background: @t3-off-canvas-background;
+  color: @t3-off-canvas-text-color;
+
+
+  // Header
+  // -----------------------------------
+  .t3-off-canvas-header {
+    background: none;
+    color: @t3-off-canvas-header-text-color;
+    padding: 0 0 0 @padding-base-horizontal;
+
+    // Title
+    h2 {
+      margin: 0;
+      line-height: 35px;
+      font-size: @font-size-base;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+  }
+
+  // Close Button
+  .close {
+    margin: 0;
+    height: 38px;
+    line-height: 35px;
+    width: 38px;
+    background: @brand-primary;
+    position: absolute;
+    top: 1;
+    right: 0;
+    color: @white;
+    .opacity(0.7);
+
+    &:hover, &:focus, &:active {
+      .opacity(1);
+    }
+  }
+
+
+  // Body
+  // -----------------------------------
+  .t3-off-canvas-body {
+
+    padding: @t3-global-padding  @grid-gutter-width;
+
+    // Links
+    // ------------
+    a {
+      color: @t3-off-canvas-link-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: @t3-off-canvas-link-hover-color;
+        text-decoration: none;
+      }
+
+      &:focus {
+        .tab-focus();
+      }
+    }
+
+
+    // Navigations
+    // ------------
+    .nav {
+    }
+
+    // Dropdown Menu
+    .dropdown-menu {
+      margin: 0;
+      background: inherit;
+
+      a:after {
+        border-color: transparent;
+        display: none;
+      }
+
+      li > a {
+        padding: 6px @t3-global-padding/2;
+
+        &:hover, &:focus, &:active {
+          background: none;
+          outline: none;
+        }
+      }
+
+      li.open > a {
+        background: none;
+      }
+
+      li.active > a {
+        color: @t3-off-canvas-link-hover-color;
+        background: none;
+      }
+
+      .dropdown-menu {
+        padding-left: @t3-global-padding/2;
+        padding-right: @t3-global-padding/2;
+      }
+    }
+
+    .dropdown-toggle {
+      .caret {
+        display: none;
+      }
+    }
+
+
+    // Modules
+    // ------------
+    .t3-module {
+      margin-bottom: @line-height-computed;
+    }
+
+    .module-title  {
+      margin-bottom: @line-height-computed / 2;
+    }
+
+    .module_menu .nav > li {
+      border-top: 0;
+      margin-top: 0;
+    }
+
+    .module_menu .nav > li > a {
+      color: @t3-off-canvas-link-color;
+      font-size: 16px;
+
+      &:hover, &:focus, &:active {
+        background: none;
+        color: @t3-off-canvas-link-hover-color;
+        text-decoration: none;
+        outline: none;
+      }
+    }
+
+    .module_menu .nav > li.active > a {
+        color: @t3-off-canvas-link-hover-color;
+    }
+
+  // End Off-Canvas Body
+  }
+
+// End Off-Canvas Content Styles
+}

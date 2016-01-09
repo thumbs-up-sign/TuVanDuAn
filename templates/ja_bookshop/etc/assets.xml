@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+	<scripts>
+		<file>js/jquery.easing.1.3.js</file>
+		<file>js/script.js</file>
+		<file>js/jquery.nivo.slider.pack.js</file>
+	</scripts>
+	
+	<stylesheets>
+		<file>fonts/font-awesome/css/font-awesome.min.css</file>
+	</stylesheets>
+	
+</assets>

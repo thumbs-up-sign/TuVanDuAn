@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension 
+	type="module" 
+	version="2.5.0"
+	method="upgrade"
+	client="site">
+	<name>BT Social Login</name>
+    <author>BowThemes</author>
+	<creationDate>April 2012</creationDate>
+   <copyright>Copyright (C) 2012 Bowthemes. All rights reserved.</copyright>
+   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+   <authorEmail>support@bowthemes.com</authorEmail>
+   <authorUrl>http://www.bowthemes.com</authorUrl>
+	<version>1.1.8</version>
+	<description>
+	<![CDATA[
+		<div class="bt_description">
+			<h3>BT Social Login Module Version 1.1.8</h3>			
+			<a href="http://bowthemes.com" target="_blank"><img src="../modules/mod_bt_sociallogin/admin/images/icon.png"></a>
+			<p>BT Social Login is the module allows registration from social network Facebook, Twitter and Google by the easiest way. BT Social Login uses ajax login/registration and support K2, Jomsocial, CB & custom component
+			</p>
+			<br clear="both" />
+			<h3>Features</h3>
+			<ul class="list-style">
+				<li>Ability to run the same time with login module of Joomla</li>
+				<li>Ajax login & Ajax registration</li>
+				<li>Social login: Facebook, twitter, google</li>
+				<li>Profile user plugin support</li>
+				<li>Captcha support</li>
+				<li>Call login & registration popup form by custom</li>
+				<li>K2, Jomsocial, CB & custom component support</li>
+				<li>Two style dispay options : Modal box and Drop down</li>				
+				<li>Compatibility with Joomla 2.5 and Joomla 3.0</li>
+				<li>Cross Browser Support: IE7+, Firefox 2+, Safari 3+, Chrome 8+, Opera 9+</li>
+			</ul>
+			<h3>Upgrade versions</h3>
+			<p>
+				Your current versions is 1.1.8. <a target="_blank" href="http://bowthemes.com/bt-sociallogin-module.html">Find our latest versions now</a>
+			</p>
+			<h3>Userful links</h3>
+			<ul>
+				<li><a target="_blank" href="http://bowthemes.com/bt-sociallogin-module.html">Video tutorials</a></li>
+				<li><a target="_blank" href="http://bowthemes.com/bt-sociallogin/">Report bug</a></li>
+				<li><a target="_blank" href="http://bowthemes.com/bt-sociallogin/">Forum support</a></li>
+			</ul>
+			<h3>About bow themes & copyright</h3>	
+			<p>
+				Bow Themes is Professional Joomla template provider. We are focused on creating unique, attractive and clean templates without loosing flexibility and simplicity of customization
+			</p>
+			Copyright (C) 2012 BowThemes	
+
+		</div>
+		<style>
+			.bt_description{
+				text-align:left;
+			}
+			.bt_description h3{
+				text-transform: uppercase;
+				margin: 20px 0px 10px 0px;
+			}
+			.bt_description img{
+				float:left;
+				margin:5px 5px 5px 0px;
+			}
+			.bt_description p,.bt_description li{
+				list-style: none outside none;
+				padding: 5px 5px 5px 20px;				
+			}
+			
+			.bt_description ul.list-style li{
+				background:url(../modules/mod_bt_sociallogin/admin/images/tick.png) 0px 6px no-repeat;
+				padding-left:30px;
+				line-height:15px;
+			}
+		</style>
+	]]>	
+	</description>
+	<files>
+		<filename module="mod_bt_sociallogin">mod_bt_sociallogin.php</filename>		
+		<filename module="mod_bt_sociallogin">index.html</filename>
+		<folder module="mod_bt_sociallogin">tmpl</folder>
+		<folder module="mod_bt_sociallogin">helpers</folder>
+		<folder module="mod_bt_sociallogin">admin</folder>
+	</files>
+	<install> 
+		<sql>
+			<file driver="mysql" charset="utf8">admin/sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> 
+		<sql>
+			<file driver="mysql" charset="utf8">admin/sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> 
+		<schemas> 
+			<schemapath type="mysql">admin/sql/updates</schemapath> 
+		</schemas> 
+	</update>
+	<scriptfile>script.php</scriptfile>
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_bt_sociallogin.ini</language>
+	</languages>
+	<config>
+		<fields name="params">			
+			<fieldset name="basic">				
+				<field
+					name="align_option"
+					type="list"
+					default="right"
+					label="ALIGN_OPTION_LABEL"
+					description="ALIGN_OPTION_DESC">
+				<option value="right">Right</option>
+				<option value="center">Center</option>
+				<option value="left">Left</option>
+				</field>
+				<field 
+					name="display_type" 
+					type="list" 
+					default="0" 					
+					label="DISPLAY_TYPE_LABEL" description="DISPLAY_TYPE_DESC">
+					<option value="0">Modal</option>
+					<option value="1">Dropdown</option>
+				</field>
+				<field 
+					name="mouse_event" 
+					type="list" 
+					default="click" 					
+					label="BT_LOGIN_MOUSE_EVENT" description="BT_LOGIN_MOUSE_EVENT_DESC">
+					<option value="click">Click</option>
+					<option value="hover">Hover</option>
+				</field>
+				<field 
+					name="login" 
+					type="menuitem" 
+					default="" 
+					disable="separator" 
+					label="LOGIN_REDIRECTION_URL" 
+					description="" > 
+					<option value="">JDEFAULT</option>
+				</field>
+				<field 
+					name="logout" 
+					type="menuitem" 
+					default="" 
+					disable="separator" 
+					label="LOGOUT_REDIRECTION_URL" 
+					description="PARAMLOGOUTREDIRECTURL" >
+					<option value="">JDEFAULT</option>
+				</field>				
+				<field 
+					name="name" 
+					type="list"
+					default="1" 
+					label="NAME_USERNAME" description="NAME_USERNAME_DESC">
+					<option value="0">Username</option>
+					<option value="1">Name</option>
+				</field>
+				<field name="show_login_button" type="radio" class="btn-group" default="1" label="LOGIN_BUTTON" description="LOGIN_LOGIN_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="enabled_registration" type="radio" class="btn-group" default="1" label="ENABLED_REGISTRATION" desciption="ENABLED_REGISTRATION_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="show_registration_button" 
+					type="radio" 
+					class="btn-group"
+					default="1" 
+					label="REGISTRATION_BUTTON" 
+					description="REGISTRATION_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field 
+					name="logout_button" 
+					type="radio" 
+					class="btn-group"
+					default="1" 
+					label="LOG_OUT_BUTTON_LABEL" 
+					description="LOG_OUT_BUTTON_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field
+					name="tag_login_modal"
+					type="text"
+					default=""
+					label="TAB_LOGON_MODAL_LABEL"
+					description="TAB_LOGON_MODAL_DESC"
+				/>
+				<field
+					name="tag_register_modal" class="enabled_registration_tab_1"
+					type="text"
+					default=""
+					label="TAB_REGISTER_MODAL_LABEL"
+					description="TAB_REGISTER_MODAL_DESC"
+				/>	
+				
+				<field 
+					name="module_id" 
+					id="bt_module_id" 
+					type="sql" 
+					default="19" 
+					multiple="multiple" 
+					size="10" 
+					label="MODULEID_LABEL" 
+					description="MODULEID_DESC" 
+					query="SELECT id, module, title FROM #__modules WHERE  `client_id`=0 AND ( `published` !=-2 AND `published` !=0 ) ORDER BY position ASC" key_field="id" value_field="title" 
+					/>
+					
+				<field 
+					name="module_position" 
+					id="bt_module_position" 
+					type="sql" 
+					default="0" 
+					multiple="multiple" 
+					size="10" 
+					label="MODULEPOSITION_LABEL" 
+					description="MODULEPOSITION_DESC" 
+					query="SELECT DISTINCT position FROM #__modules ORDER BY position ASC" key_field="position" value_field="position" 
+					/>
+				<field name="use_captcha" type="list" default="1" label="USE_CAPTCHA" description="USE_CAPTCHA_DESC">
+					<option value="0">JNONE</option>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="2">BUILTIN_CAPTCHA</option>
+				</field>	
+				<field 
+					name="integrated_component"
+					type="list" class="bt_control"
+					default=""
+					label="INTEGRATE_COMPONENT_LABEL"
+					description="INTEGRATE_COMPONENT_DESC"
+				>
+					<option value="">JNOne</option>
+					<option value="com_user">User Component</option>
+					<option value="k2">K2 Component</option>
+					<option value="jomsocial">JoomSocial</option>
+					<option value="cb">Community Builder</option>
+					<option value="option">Option</option>
+				</field>
+				<field 
+					name="module_option" 
+					id="bt_module_option" class="integrated_component_option"
+					type="sql" 
+					default="0" 					
+					size="10" 
+					label="MODULE_OPTION_LABEL" 
+					description="MODULE_OPTION_DESC" 
+					query="SELECT id, module, title FROM #__modules WHERE  `client_id`=0 AND ( `published` !=-2 AND `published` !=0 ) ORDER BY position ASC" key_field="id" value_field="title" 
+				>
+					<option value="">JNOne</option>
+				</field>	
+				<field name="link_option" class="integrated_component_option" type="text" default="" label="LINK_OPTION_LABEL" description="LINK_OPTION_DESC" />
+			</fieldset>
+			<fieldset name="form-style" label="MODULE_FORM_STYLE">
+				<field name="bg_button_color" default="#6d850a" type="text" class="bt_color" label="BG_BUTTON_COLOR_LABEL" description="BG_BUTTON_COLOR_DESC" />							
+				<field name="text_button_color" default="#ffffff" type="text" class="bt_color" label="TEXT_BUTTON_COLOR_LABEL" description="TEXT_BUTTON_COLOR_DESC" />
+				<field name="loginbox_size" type="text" default="360,400" label="LOGINBOX_SIZE_LABEL" description="LOGINBOX_SIZE_DESC" />
+				<field name="registrationbox_size" default="450,500" type="text" label="REGISTRATIONBOX_SIZE_LABEL" description="REGISTRATIONBOX_SIZE_DESC" />
+			</fieldset>
+			<fieldset name="facebook-login" label="MODULE_FACEBOOK_LOGIN_LABEL">
+				<field name="enable_fb" type="radio" class="btn-group" default="0" label="ENABLE_FB_LOGIN_LABEL" description="ENABLE_FB_LOGIN_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="appfb_id" type="text" default="" size="35" label="APP_FB_ID_LABEL" description="APP_FB_ID_DESC"/>
+				<field name="appfb_secret" type="text" default="" size="35" label="APP_FB_SECRET_LABEL" description="APP_FB_SECRET_DESC"/>							
+				<field name="edit_info_fb" type="radio" default="0" class="btn-group bt_control" label="EDIT_INFO_LABEL" description="EDIT_INFO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="edit_email_facebook" type="radio" default="0" class="btn-group edit_info_fb_1" label="EDIT_EMAIL_LABEL" description="EDIT_EMAIL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field type="spacer"  class="bt-spacer" name="PROFILE_FIELDS" default="PROFILE_FIELDS" />
+				<field type="profilefield" social="facebook" default="" name="fb-profiles" label="PROFILEFIELD_LABEL" description="PROFILEFIELD_DESC"/>
+			</fieldset>
+			<fieldset name="google-login" label="GOOGLE_LOGIN_LABEL">
+				<field name="enable_gg" type="radio" class="btn-group" default="0" label="ENABLE_GG_LOGIN_LABEL" description="ENABLE_GG_LOGIN_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="appgg_id" type="text" default="" size="35" label="APP_GG_ID_LABEL" description="APP_GG_ID_DESC"/>
+				<field name="appgg_secret" type="text" default="" size="35" label="APP_GG_SECRET_LABEL" description="APP_GG_SECRET_DESC"/>							
+				<field name="edit_info_gg" type="radio" default="0" class="btn-group bt_control" label="EDIT_INFO_LABEL" description="EDIT_INFO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="edit_email_google" type="radio" default="0" class="btn-group edit_info_gg_1" label="EDIT_EMAIL_LABEL" description="EDIT_EMAIL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field type="spacer"  class="bt-spacer" name="PROFILE_FIELDS" default="PROFILE_FIELDS" />
+				<field type="profilefield" social="google" default="" name="gg-profiles" label="PROFILEFIELD_LABEL" description="PROFILEFIELD_DESC"/>
+			</fieldset>
+			<fieldset name="twitter-login" label="TWITTER_LOGIN_LABEL">
+				<field name="enable_twitter" type="radio" class="btn-group" default="0" label="ENABLE_TWITTER_LOGIN_LABEL" description="ENABLE_TWITTER_LOGIN_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="apptwitter_id" type="text" default="" size="35" label="APP_TWITTER_CONSUMER_KEY_LABEL" description="APP_TWITTER_CONSUMER_KEY_DESC"/>
+				<field name="apptwitter_secret" type="text" default="" size="35" label="APP_TWITTER_CONSUMER_SECRET_LABEL" description="APP_TWITTER_CONSUMER_SECRET_DESC"/>
+				<field name="edit_info_twitter" type="radio" default="1" class="btn-group bt_control" label="EDIT_INFO_LABEL" description="EDIT_INFO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="edit_email_twitter" type="radio" default="1" class="btn-group edit_info_twitter_1" label="EDIT_EMAIL_LABEL" description="EDIT_EMAIL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field type="spacer"  class="bt-spacer" name="PROFILE_FIELDS" default="PROFILE_FIELDS" />
+				<field type="profilefield" social="twitter" default="" name="tt-profiles" label="PROFILEFIELD_LABEL" description="PROFILEFIELD_DESC"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="enable_profile" type="radio" class="btn-group bt_control" default="1" label="ENABLE_PROFILE_LABEL" description="ENABLE_PROFILE_DESC" >
+                    <option value="0">JNO</option>
+					<option value="1">JYES</option>
+                </field>
+				<field 
+					name="loadJquery" 
+					type="list" 
+					default="auto" 
+					label="BT_LOADJQUERY" 
+					description="BT_LOADJQUERY_DESC">
+					<option value="auto">Auto</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					<field addfieldpath="/modules/mod_bt_sociallogin/admin/formfield" type="asset" name="asset" path="modules/mod_bt_sociallogin/admin/" />
+					<field name="cache" type="hidden" default="0" />
+			</fieldset>
+	
+		</fields>
+	</config>
+</extension>

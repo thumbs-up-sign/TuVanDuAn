@@ -1,0 +1,240 @@
+html[dir="rtl"] {
+  // MODULES
+  // ------------------------------------------------
+  .t3-sidebar .ja-tabswrap .ja-tabs-title-top ul.ja-tabs-title li h3 span {
+    padding-right: 10px;
+    border-right: 1px solid @t3-border-color;
+    border-left: 0;
+  }
+
+  .t3-sidebar .ja-tabswrap .ja-tabs-title-top ul.ja-tabs-title li:last-child h3 span {
+    border: 0;
+  }
+  
+  // Sidebar
+  .t3-sidebar-1 .t3-module .box-product > div {
+    margin-right: 0;
+    margin-left: @t3-global-margin;
+  }
+
+  // SLideShow
+  .ja-ss-btns span {
+    background-image: url("@{t3-image-path}/arrow-next.png");
+  }
+
+  .ja-ss-btns .ja-ss-next {
+    background-image: url("@{t3-image-path}/arrow-prev.png");
+  }
+
+  .ja-ss-wrap {
+    direction: ltr;
+
+    .ja-ss-desc {
+      direction: rtl;
+    }
+  }
+
+  // Module front-end edit
+  // ---------------------
+  #modules-form {
+    .label-default {
+      display: inline-block;
+    }
+  }
+
+
+  // MIJOSHOP
+  // ------------------------------------------------
+  #container_oc {
+    text-align: right;
+  }
+
+  .product-grid > div {
+    text-align: right;
+  }
+
+  .select-box:before {
+    right: auto;
+    left: 0;
+    background-image: url("@{t3-image-path}/bg-drop-select-rtl.gif");
+  }
+
+  .product-list .image {
+    margin-left: @t3-global-margin;
+    margin-right: 0;
+  }
+
+  .product-list .price {
+    float: left;
+    margin-right: 8px;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .product-list .col-md-3 {
+    padding-right: 0;
+  }
+
+  .product-list.row .col-md-3 {
+    padding-right: 15px;
+  }
+
+  .product-list .cart,
+  .product-list .wishlist, .product-list .compare {
+    float: right;
+  }
+
+  .product-list .wishlist a, .product-list .compare a {
+    margin-left: 0;
+    margin-right: @t3-global-margin/2;
+  }
+
+  .customNavigation a.prev {
+    float: left;
+    margin-right: 5px;
+  }
+
+  .success .close, .warning .close, .attention .close, .information .close {
+    float: left;
+  }
+
+  .cart-info tbody .name, .cart-info tbody .model, .cart-info tbody .quantity {
+    text-align: right;
+  }
+
+  #content_oc .content_oc .radio input[type="radio"], 
+  #content_oc .content_oc .radio-inline input[type="radio"], 
+  #content_oc .content_oc .checkbox input[type="checkbox"], 
+  #content_oc .content_oc .checkbox-inline input[type="checkbox"] {
+    margin-right: 0;
+  }
+
+  .product-grid.row-5 > div, .ja-product-grid > div {
+    float: right;
+  }
+
+  .category-info .image {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+  }
+
+  #content_oc .content_oc table tr td.text-align-right {
+    text-align: left !important;
+  }
+
+  .cart-total tr td.right {
+    text-align: left;
+  }
+
+  .liteAccordion .slide > div .cart,
+  .liteAccordion .slide > div .wishlist, .liteAccordion .slide > div .compare {
+    float: right;
+  }
+
+  .liteAccordion .slide > div .wishlist a, .liteAccordion .slide > div .compare a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+	
+	.product-info {
+	
+		.review > div {
+			direction: ltr;
+		}
+		.review .share a {
+			float: right;
+		}
+		
+		.cart .actions {
+			> a, > input {
+				float: right;
+				margin-left: 10px;
+			}
+		}
+	}
+	
+	#header_oc #cart .heading {
+		direction: ltr;
+	}
+	
+	.pagination .results {
+		direction: ltr;
+	}
+	
+	.htabs a {
+		direction: ltr;
+	}
+	
+
+  // MIJOSHOP MODULES
+  .mini-cart-info .remove {
+    text-align: left;
+  }
+	
+	.box-category {
+		ul > li > a {
+			direction: ltr;
+			text-align: right;
+		}
+	}
+	
+	.related-products .module-title {
+		direction: ltr;
+		text-align: right;
+	}
+	
+	.toolbar-ct-1 .t3-module p {
+		white-space: nowrap;
+	}
+
+  // JA Mijoshop Product SLider
+  .customNavigation {
+    float: left;
+  }
+
+  .owl-carousel .owl-item {
+    float: right;
+  }
+
+  #owl-demo .owl-item {
+    padding: 0 0 0 30px;
+  }
+
+  .buttons .right {
+    float: left;
+    margin-left: 0;
+    margin-right: @t3-global-margin;
+    text-align: left;
+  }
+
+  .buttons .left {
+    float: right;
+  }
+
+  // Slideshow
+  .slideshow {
+    direction: ltr;
+  }
+
+  .slideshow .nivo-directionNav a {
+    text-indent: 999px;
+    overflow: hidden;
+  }
+
+  //
+  // MOBILE
+  // -------------------------------------------------------------
+  @media (max-width: @screen-xs-max) { 
+
+  }
+}
+
+// Featured Products
+.box-product > div {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+

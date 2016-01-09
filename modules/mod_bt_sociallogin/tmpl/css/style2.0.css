@@ -1,0 +1,443 @@
+#btl-content-login #social-connect div{
+	color: #555555;
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 18px;
+}
+#btl-content-login #social-connect ul {
+ margin: 0 !important;	
+ padding:0;
+}
+#btl-content-login #social-connect li{
+	float: left;
+	list-style: none;
+	margin:10px 0px 15px 8px;
+	height:20px;
+	padding:0;
+}
+#btl-content-login #social-connect img{
+	box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+}
+#btl-content-login #social-connect  a:hover img{
+	box-shadow: 0 3px 1px rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	margin-top:1px;
+}
+#btl-content-login #social-connect  a{
+	text-decoration: none!important;
+}
+#btl-content-login .spacer{
+	height:14px;
+}
+#btl-content-login #social-connect  a:HOVER,#btl-content-login #social-connect  a:ACTIVE,#btl-content-login #social-connect  a:FOCUS{
+	text-decoration: none!important;
+	background-color: transparent !important;
+}
+/* Overlay , enable it if display in header, and header{over-flow:hidden;} */
+#simplemodal-overlay {background-color:#000;}
+#simplemodal-container{
+	width:400px;
+	height:400px;
+}
+.simplemodal-wrap{
+	overflow:visible!important;
+}
+#simplemodal-container a.modalCloseImg {background:url(../images/close_bt.png) top no-repeat; width:26px; height:26px; display:inline; z-index:3200; position:absolute; top:6px; right:10px; cursor:pointer;}
+#simplemodal-container a.modalCloseImg:hover {background:url(../images/close_bt.png) bottom no-repeat; width:26px; height:26px; display:inline; z-index:3200; position:absolute; top:6px; right:10px; cursor:pointer;}
+
+.btl-content-block{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+	border:1px solid #dadada;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+    display: none;
+    height: auto;
+    overflow: hidden;
+    text-align: left;	
+	font-size:12px;
+	position:relative;
+}
+.btl-content-block form{
+	margin:0;
+	padding:0;
+}
+.btl-content-block .invalid{
+	color: #9D261D;
+    font-weight: bold;
+}
+.btl-content-block h3{
+	background: url("../images/header_bglogin.jpg") repeat-x scroll left top transparent;
+    font-weight: normal;
+	line-height: 35px;
+	margin:0px;
+    padding: 3px 0px 0px 19px!important;
+	text-transform: uppercase;
+	font-size:18px;
+}
+.btl-input > input[type=text],
+.btl-input > input[type=email],
+.btl-input > input[type=password],
+#recaptcha > input{
+    border: 1px solid #dadada;
+    border-radius:4px;
+    margin: 5px 0;   
+    text-indent: 5px;
+    height: 26px;
+	padding:0;
+	width: 200px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+.btl-input > textarea{
+	width: 200px;
+	border: 1px solid #dadada;
+    border-radius:4px;
+    margin: 5px 0;   
+    text-indent: 5px;
+}
+.btl-input > input:focus,
+.btl-input > textarea:focus,
+#recaptcha > input:focus{
+	border-color: #E9322D;
+    box-shadow: 0 0 6px #F8B9B7;
+}
+
+#recaptcha span#btl-captcha-reload{
+	display: inline-block;
+	width: 16px; height: 16px;
+	background: url('../images/reload.png') no-repeat;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+#btl{
+	position:relative;
+}
+#btl .btl-panel{
+	overflow:hidden;
+	
+}
+#btl .btl-panel > #btl-panel-profile{
+	background:url(../images/btl-panel-bg.png) top right no-repeat;
+	padding-right:30px;
+}
+button::-moz-focus-inner {
+padding:0; border: none;
+}
+#btl .btl-panel > span{
+	display:inline-block;
+	height:26px;
+	line-height:28px;
+	padding:0 18px;
+	cursor:pointer;
+	text-indent: 0!important;
+	width: auto;	
+}
+#btl .btl-panel > span{
+	margin:2px 0px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+#btl .btl-panel > span,button.btl-buttonsubmit,input.btl-buttonsubmit{
+	border-radius:3px;
+}
+#btl .btl-panel > span.active,#btl .btl-panel > span:hover,button.btl-buttonsubmit:focus,input.btl-buttonsubmit:focus{
+	opacity:0.8;
+}
+.btl-error{
+	display:none;	
+}
+.btl-error-detail{
+	display:none;
+	float: right;
+	color: #FF0000;
+	margin-bottom:4px;
+}
+.btl-field,#register-link,.btl-error-detail,.btl-error,.btl-note{
+	margin: 5px 20px 5px 20px !important;
+	overflow:hidden;
+}
+ .btl-label{
+	float:left!important;
+}
+ .btl-input{
+	float:right!important;
+}
+
+#jform_profile_dob_img{
+	margin-top: 5px;	
+}
+#recaptcha{
+	height: auto!important;
+	float:right;
+}
+#btl-content-login .btl-input input{
+	width: 180px;
+}
+#btl-input-remember{
+	margin-bottom:5px;
+	height: 20px;
+}
+#btl-checkbox-remember{
+	width: 15px!important;
+}
+.clear{
+	clear:both;
+}
+.btl-error{
+	color: #FF0000;
+}
+input.btl-buttonsubmit,
+button.btl-buttonsubmit{
+    border:none!important;
+    box-shadow: 1px 1px 3px rgba(9,4,3,0.86);
+    cursor: pointer;
+    text-align: center!important;
+    text-shadow: 0 1px 1px #4A4A4A;
+    width: auto!important;
+	padding:0 12px;
+	height:29px!important;;
+	line-height:29px!important;;
+	display:inline-block;
+}
+div.btl-buttonsubmit{
+	margin:0px 25px 13px 18px;
+}
+#btl-content > .btl-content-block{
+	position:absolute!important;
+	z-index:999;
+}
+.btl-note,#register-link{
+	padding:12px 0px;
+}
+
+ #btl-content-login .btl-input{
+	float:right;
+}
+
+#btl-content div.btl-buttonsubmit{
+	border-top: 1px dotted #c4c4c4;
+}
+#btl-content #btl-content-login .btl-label {
+	line-height:38px;
+	min-width: 0px!important;
+}
+
+/* CSS FOR USER PROFILE MODULE**/
+#btl-content  #btl-content-profile{
+	overflow:hidden;
+}
+#btl-content  #btl-content-profile #module-in-profile>div{
+	min-width:200px;
+}
+#btl-content #btl-content-profile #module-in-profile ul{
+	position: static;	
+	text-align: left;
+	margin: 0 0 0 15px;
+	padding: 0!important;
+	
+}
+#btl-content-profile ul.menu li {
+    background: url("../images/bullet.png") no-repeat scroll 5px 15px transparent;
+    padding: 0 0 0 20px!important;
+	border-bottom: 1px solid #E8E8E8;
+	display:list-item!important;
+    line-height: 37px;
+	
+}
+#btl-content #btl-content-profile #module-in-profile ul li a{
+	color: #6b6b6b;
+	text-decoration: none !important;
+	text-transform: none!important;
+	font-family: arial,tahoma;
+}
+
+#btl-content-profile ul.menu li a {
+    color: #616161!important;
+	text-decoration:none!important;
+	border:none!important;
+	background:none!important;
+	display:inline!important;
+	padding:0!important;
+	margin:0!important;
+	text-transform: none!important;
+}
+#btl-content-profile div.btl-buttonsubmit{
+	clear:both;
+	margin-bottom:15px;
+	border: none!important;
+	text-align: center;
+	margin-top: 0!important;
+	
+}
+/* style panel when action process */
+#btl-register-in-process,#btl-login-in-process{
+	display: none;
+	background: url("../images/loading.gif") no-repeat #000 50%;
+	opacity: 0.4;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9999;
+	top:-1px;
+	left:-1px;
+	padding-top:1px;
+	padding-left:1px;
+}
+
+/* style panel when register success */
+#btl-success{
+	display: none;
+	margin: 20px 0 30px 0;
+	background:url("../images/notice-info.png") no-repeat;
+	display: none;
+	color:#000;
+	border-bottom: 2px solid #90B203;
+	border-top: 2px solid #90B203;
+	font-size:14px;
+	padding: 10px 10px 10px 25px;
+}
+/* style for ul in login panel*/
+#bt_ul{
+	margin-bottom:10px!important;
+	margin-left: 20px;
+	list-style: none;
+}
+
+/* for modal*/
+#btl-content-login ul{
+	position: static!important;	
+	text-align: left;
+}
+#btl-content-login ul li{
+	margin-top: 7px;
+}
+#bt_ul li a{
+	padding: 0!important;	
+}
+#btl-wrap-module{
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-top:10px;
+	min-width:200px;
+}
+.bt-scroll{
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.bt-scroll .bt-scroll-inner{
+	padding-bottom:10px;
+}
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 100%;
+	background: red;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	background: #eee;
+	position: relative;
+}
+
+.jspDrag
+{
+	background: #dadada;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}

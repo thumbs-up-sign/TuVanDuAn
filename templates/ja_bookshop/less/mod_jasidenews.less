@@ -1,0 +1,210 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+ // VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Modify this for custom colors, font-sizes, etc
+
+.ja-slidenews-item {
+  border-bottom: 1px dotted #ccc;
+  clear: both;
+  float: left;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.ja-slidenews-item .ja-title {
+  display: block;
+  font-weight: bold;
+}
+
+.ja-slidenews-item .ja-createdate {
+  color: #666;
+  font-size: 92%;
+  font-weight: bold;
+  padding: 2px 5px 2px 0;
+}
+
+.ja-sidenews-title{
+  font-weight: bold;
+}
+
+.ja-sidenews-postdate{
+  font-size: 85%;
+}
+
+/*****STYLE FOR SIDENEWS LAYOUT******/
+.ja-sidenews{
+  cursor: pointer;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.ja-sidenews-display {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.ja-sidenews-desc{
+  padding: 5px 10px;
+}
+
+.ja-sidenews-desc h3 {
+  line-height: 1.4;
+}
+
+.ja-slidenews-cover {
+  bottom: 0;
+  float: left;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.ja-slidenews-item img {
+  margin-right: 10px;
+  margin-top: 3px;
+  border: 0;
+}
+
+.ja-slidenews-item img[align="left"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.ja-slidenews-item img[align="right"] {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.ja-tab-subcontent .ja-slidenews-item img[align="left"],
+.ja-tab-subcontent .ja-slidenews-item img[align="right"]  {
+  float: none;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+// Sidenew in T3 Module Highlight
+
+.t3-module.highlight {
+  .ja-sidenews-list {
+    margin: 0 -(@t3-global-padding/4);
+  }
+
+  .ja-slidenews-item {
+    width: 33.3%;
+    border-bottom: 0;
+    clear: none;
+    padding: 0 @t3-global-padding/4;
+
+    .ja-title,
+    .ja-createdate,
+    .description {
+      display: none;
+    }
+
+    .ja-title {
+      color: @white;
+      font-family: @font-family-serif;
+
+      &:hover, &:focus, &:active {
+        color: @link-color;
+        text-decoration: none;
+      }
+    }
+
+    img[align="left"] {
+      margin: 0;
+      border: 0;
+      max-width: 100%;
+    }
+
+    &:first-child {
+      width: 100%;
+      padding-bottom: @t3-global-padding;
+      margin-bottom: @t3-global-margin;
+      border-bottom: 1px dotted #383838;
+      color: #666;
+
+      .ja-title,
+      .ja-createdate,
+      .description {
+        display: block;
+      }
+
+      img[align="left"] {
+        border: 0;
+        margin-left: -5px;
+        margin-right: 15px;
+        padding: 0 5px;
+        width: 33.3%;
+      }
+    }
+
+  }
+}
+
+
+// Support Column
+.col-6 {
+  .ja-sidenews-list {
+    margin: 0 -@grid-gutter-width/2;
+  }
+
+  .ja-slidenews-item {
+    clear: none;
+    width: 16.6667%;
+    padding: 0 @grid-gutter-width/2;
+    border-bottom: 0;
+
+    .ja-slidenews-image {
+      position: relative;
+      margin: 0 0 @t3-global-margin/2;
+
+      .btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: none;
+      }
+    }
+
+    img[align="left"] {
+      border: 0;
+      float: none;
+    }
+
+    .ja-title {
+      color: @black;
+      display: block;
+      font-family: @font-family-serif;
+      padding: 0;
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+    &:hover {
+      .ja-title {
+        color: @brand-primary;
+        text-decoration: none;
+      }
+
+      .ja-slidenews-image {
+        .btn {
+          display: block;
+        }
+      }
+    }
+  }
+ }

@@ -1,0 +1,495 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+ 
+
+// ------------------------------------------------------
+// CORE NAVIGATIONS ELEMENTS
+// ------------------------------------------------------
+
+//
+// DROPDOWN (dropdowns.less)
+// --------------------------------------------------
+
+// Dropdown arrow/caret
+// --------------------
+.caret {
+}
+
+
+// The dropdown wrapper (div)
+// --------------------------
+.dropdown {
+}
+
+
+// The dropdown menu (ul)
+// ----------------------
+.dropdown-menu {
+
+  // Dividers (basically an hr) within the dropdown
+  .divider {
+  }
+
+  // Links within the dropdown menu
+  > li > a {
+    padding: 5px 20px;
+  }
+}
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+  }
+}
+
+// Active state
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+  }
+}
+
+// Disabled state
+.dropdown-menu > .disabled > a {
+  &,
+  &:hover,
+  &:focus {
+  }
+}
+
+// Nuke hover/focus effects
+.dropdown-menu > .disabled > a {
+  &:hover,
+  &:focus {
+  }
+}
+
+
+// Dropdown section headers
+// ------------------------
+.dropdown-header {
+  padding: 3px 20px;
+  font-size: @font-size-base;
+  // T3: Links in Header
+  a {
+    color: @dropdown-header-color;
+  }
+}
+
+
+// T3 Note: Extend BS3 Dropdown Menu to multi level
+// See "base-bs3/less/legacy-navigation.less"
+// Dropdown Sub Menus
+// ------------------
+.dropdown-submenu > .dropdown-menu {
+}
+
+// Caret to indicate there is a submenu
+.dropdown-submenu > a:after {
+  border-left-color: darken(@dropdown-bg, 20%);
+}
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: @dropdown-link-hover-color;
+}
+
+
+
+//
+// NAVS (navs.less)
+// --------------------------------------------------
+
+// Base class
+// ----------
+.nav {
+
+  // Nav Items
+  > li {
+    > a {
+      // Hover state
+      &:hover,
+      &:focus {
+      }
+    }
+
+    // Disabled state
+    &.disabled > a {
+      // Hover state
+      &:hover,
+      &:focus {
+      }
+    }
+  }
+
+  // Seperator
+  > li > .separator {
+    position: relative;
+    display: block;
+    padding: @nav-link-padding;
+    line-height: @line-height-computed;
+
+    @media (min-width: @grid-float-breakpoint) {
+      padding-top: ((@navbar-height - @line-height-computed) / 2);
+      padding-bottom: ((@navbar-height - @line-height-computed) / 2);
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      // The caret
+      .caret {
+      }
+    }
+  }
+
+  //End
+}
+
+
+// Tabs
+// ----
+.nav-tabs {
+
+  > li {
+
+    // Actual tabs (as links)
+    > a {
+
+      // Hover state
+      &:hover {
+      }
+
+    }
+
+    // Active state, and it's :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+      }
+    }
+
+  }
+
+  //End
+}
+
+
+// Pills
+// -----
+.nav-pills {
+  > li {
+
+    // Links rendered as pills
+    > a {
+    }
+
+    + li {
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+
+        // The caret
+        .caret {
+        }
+      }
+    }
+
+  }
+
+  // End
+}
+
+
+// Dropdowns Caret in Nav
+// ----------------------
+// Make dropdown carets use link color in navs
+.nav .caret {
+  border-top-color: @link-color;
+  border-bottom-color: @link-color;
+}
+
+.nav a:hover .caret {
+  border-top-color: @link-hover-color;
+  border-bottom-color: @link-hover-color;
+}
+
+
+
+// 
+// BREADCRUMS (breadcrums.less)
+// -------------------------------------------------------
+.t3-navhelper {
+  background: @breadcrumb-bg;
+  color: @gray-light;
+  height: 36px;
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  background: none;
+
+  > li:first-child,
+  > li:nth-child(2) {
+    &:before {
+      content: "" !important;
+    }
+  }
+
+  > li a {
+    color: @breadcrumb-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: @breadcrumb-active-color;
+    }
+  }
+
+  // Active
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+
+  // T3 Note: Hide default Joomla! arrow in breadcrum
+  .divider {
+    display: none;
+  }
+}
+
+
+
+//
+// PAGINATION (MULTIPLE PAGES) (pagination.less)
+// --------------------------------------------------
+.pagination-wrap {
+}
+
+.pagination {
+
+  > li {
+    > a,
+    > span {
+    }
+  }
+
+  // Hover state
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+    }
+  }
+
+  // Active state
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+    }
+  }
+
+  // Disabled state
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+    }
+  }
+}
+
+
+// T3 Note: Fix for Joomla! Pagination
+// ------------------------------------
+
+
+html .pagination {
+  .clearfix();
+  margin: @t3-global-margin 0;
+  border: 0;
+  display: block;
+
+  // left align on Tablets / Desktop
+  @media screen and (min-width: @screen-sm) {
+    float: left;
+  }
+  // re-defined nested class - joomla structure
+  .pagination {
+    display: inline-block;
+    border: 0;
+  }
+}
+
+
+// Counter
+// -------
+.counter {
+  display: inline-block;
+  margin-top: @line-height-computed;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  background-color: @pagination-bg;
+  border: 1px solid @pagination-border;
+  border-radius: @border-radius-base;
+  // Right align on Tablets / Desktop
+  @media screen and (min-width: @screen-sm) {
+    float: right;
+  }
+}
+
+
+// Sizing
+// ------
+// Large
+.pagination-lg {
+}
+
+// Small
+.pagination-sm {
+}
+
+
+
+//
+// PAGER PAGINATION (pager.less)
+// --------------------------------------------------
+.pager {
+
+  li {
+    > a,
+    > span {
+    }
+
+    // Hover state
+    > a:hover,
+    > a:focus {
+    }
+
+    // Active state
+    &.active,
+    &.active:hover,
+    &.active:focus {
+    }
+  }
+
+  .next {
+    > a,
+    > span {
+    }
+  }
+
+  .previous {
+    > a,
+    > span {
+    }
+  }
+
+  // Disabled state
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+    }
+  }
+
+}
+
+
+
+//
+// PANELS (panels.less)
+// --------------------------------------------------
+// Base class
+.panel {
+}
+
+// Panel contents
+.panel-body {
+}
+
+
+// Optional heading
+.panel-heading {
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of it's default margins for spacing.
+.panel-title {
+  > a {
+    color: inherit;
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+}
+
+
+// Collapsable panels (aka, accordion)
+.panel-group {
+
+  .panel {
+    + .panel {
+    }
+  }
+
+  .panel-heading {
+    + .panel-collapse .panel-body {
+    }
+  }
+
+  .panel-footer {
+    + .panel-collapse .panel-body {
+    }
+  }
+
+}
+
+
+// Contextual variations
+.panel-default {
+}
+
+.panel-primary {
+}
+
+.panel-success {
+}
+
+.panel-warning {
+}
+
+.panel-danger {
+}
+
+.panel-info {
+}

@@ -1,0 +1,197 @@
+.flipbookLayout{
+	position:relative;
+	background: url("../images/shadow-bottom-flip.png") no-repeat scroll center bottom transparent;
+    min-height: 271px;
+    padding-bottom: 28px;
+}
+.flipbookLayout .flipbook{
+	border-bottom:2px solid #e5e5e5;
+}
+.flipbookLayout a{
+	text-decoration:none;
+}
+.flipbookLayout .loading{
+	height: 66px;
+	width:66px;
+	left: 50%;
+	margin-left: -33px;
+	margin-top: -33px;
+	position: absolute;
+	top: 50%;
+	background: url(../images/loading.gif) no-repeat;
+}
+.flipbookLayout .bt-inner img {
+	max-width:100%;
+}
+.flipbookLayout .bt-inner .bt-title {
+    margin: 0 0px 10px 0px;
+    text-transform: uppercase;
+    line-height: 16px;
+    min-width: 150px;
+	font-family:'kreonregular';
+	color:#bf4b49;
+	font-size:18px;
+}
+.flipbookLayout .bt-inner .bt-title-nointro {
+    padding: 0 0px 10px 0px;
+    color: #d67900;
+    font-weight: bold;
+}
+.flipbookLayout .bt-inner .bt-category {
+    color: #4a4a4a;
+    margin: 0 0px 10px 0px;
+    font-weight: bold;
+    min-width: 150px;
+}
+
+.flipbookLayout .bt-inner .bt-introtext {
+    margin: 5px 0px 5px 0px;
+    display: block;
+    font-weight: normal;
+    min-width: 150px;
+}
+.flipbookLayout .bt-inner .bt-introtext img {
+    margin: 5px 0px;
+}
+.flipbookLayout .bt-extra {
+    margin-top: 5px;
+}
+
+.flipbookLayout .bt-date,.flipbookLayout .bt-author {
+    font-weight: normal;
+    font-size: 80%;
+}
+.flipbookLayout .bt-row-separate {
+    clear: both;
+    height: 1px;
+    border-bottom: 1px dotted #959595;
+    margin: 0px 10px;
+    margin-bottom: 15px;
+}
+.flipbookLayout .bt-prices {
+  background: url("../images/big-price.png") no-repeat center center;
+  height: 89px;
+  margin-left: 64px;
+  margin-top: -85px;
+  position: absolute;
+  width: 100px;
+}
+.flipbookLayout .bt-prices:hover{
+  background: url("../images/big-price-hover.png") no-repeat center center;
+}
+.flipbookLayout .bt-prices-oldPrice {
+  color: #FFFFFF;
+  float: left;
+  font-size: 14px;
+  margin-top: 11px;
+  padding-left: 20px;
+  text-align: center;
+  font-weight:bold;
+  text-decoration:line-through;
+
+}
+.flipbookLayout .bt-prices-salesPrice{
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight:bold;
+  margin-top: 25px;
+  display: block;
+
+}
+.flipbookLayout .bt-link{
+  margin-bottom:8px;
+}
+.flipbookLayout .bt-buttons .bt-buttons-wrapper{
+    width: 180px;
+    margin:auto;
+	overflow:hidden;
+	margin-top:5px;
+}
+.flipbookLayout .bt-viewdetails{
+    margin-right: 5px;
+}
+.flipbookLayout .bt-viewdetails,
+.flipbookLayout .bt-addtocart{  
+  background: url("../images/add-cart.png") no-repeat scroll center top transparent;
+  display:block;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Georgia;
+  font-size: 14px;
+  height: 30px;
+  text-decoration:none;
+  line-height:30px;
+  margin: auto;
+  border:none;
+  margin:0 auto;
+  text-align: center;
+  width: 92px;
+}
+.flipbookLayout .bt-viewdetails:hover,
+.flipbookLayout .bt-addtocart:hover{
+     background: url("../images/add-cart-hover.png") no-repeat scroll center top transparent;
+}
+.flipbookLayout .bt-inner{
+	text-align:center;
+	padding:20px;
+	overflow:hidden;
+}
+.flipbookLayout .b-wrap-right .bt-row{
+	background:url(../images/shadow-flip.png) top left repeat-y;
+}
+.responsiveLayout .last .bt-inner{
+	border-right:0;}
+.booklet .b-wrap-left  {background:url(../images/l-slideshow.png) center repeat-y;	background-size:100% 100%;}
+.booklet .b-wrap-right {background:url(../images/r-slideshow.png) center repeat-y;	background-size:100% 100%;}
+.booklet .b-tab {
+	background:none;
+	bottom:20px; 
+	height:34px; 
+	line-height:30px;
+	width:86px;
+	text-align:center; 
+	color:#ef8a89; 
+	position:absolute; 
+	font-size:18px;
+	font-family:'kreonregular';}
+.booklet .b-tab-prev {
+	right:50%;
+	background:url(../images/last-flip.png) top left no-repeat;
+	text-indent:15px;
+	text-transform:uppercase;
+	line-height:34px;
+}
+.booklet .b-tab-prev:hover{
+	background:url(../images/last-flip.png) top left no-repeat;
+}
+
+.booklet .b-tab-next{
+	left:49.9%;
+	background:url(../images/next-flip.png) top left no-repeat;
+	padding-left:15px;
+	text-align:left;
+	text-transform:uppercase;
+	line-height:34px;
+}
+.booklet .b-tab-next:hover{
+	background:url(../images/next-flip.png) top left no-repeat;
+}
+
+.booklet .b-tab:hover{
+	color:#ef8a89;
+}	
+.booklet {
+  margin: 0;
+  overflow: visible !important;
+  position: relative;
+}
+.booklet .b-wrap-right .b-counter{
+	right: 17px !important;
+}
+.booklet .b-wrap-left .b-counter{
+	left: 16px !important;
+}
+.booklet .b-counter{
+	bottom: 5px !important;
+}

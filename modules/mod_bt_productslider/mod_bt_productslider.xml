@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+    <name>BT Product Slider</name>
+    <creationDate>October 2012</creationDate>
+    <author>www.bowthemes.com</author>
+    <copyright>Copyright (C) 2012 Bowthemes. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@bowthemes.com</authorEmail>
+    <authorUrl>http://www.bowthemes.com</authorUrl>
+    <version>1.2.8</version>
+    <description>
+	<![CDATA[
+<div class="bt_description">
+	<h3>BT Product Slider Module Version 1.2.8</h3>
+	<a href="http://bowthemes.com" target="_blank"><img
+		src="../modules/mod_bt_productslider/admin/images/bt-slider.png">
+	</a>
+	<p>BT Product Slider is a smart choice for E-commerce Website. It helps display your featured products in beautiful Flipbook Slide or Accordion effects. Especially, BT Product Slider is powered by Responsive solution, what makes it truly useful for your business on Mobile and Computer </p>
+	<br clear="both" />
+	<h3>Features</h3>
+	<ul class="list-style">
+		<li>Compatibility with Joomla 2.5 and Joomla 3.x</li>
+		<li>Virtuemart & Joomshopping integration</li>
+		<li>Allow to show the latest products, best-selling, hit products or showing random products </li>
+		<li>Scalable size of the module</li>
+		<li>Horizontal and vertical product presentation (columns and rows configuration).</li>
+		<li>Control slide with next, back and navigation button</li>
+		<li>Virtuemart & Joomshopping integration</li>
+		<li>Image Cropping</li>
+		<li>Powerful with many layouts: Slide, Arcodion, Flipbook, Responsive</li>
+		<li>Easy and friendly back-end administration.</li>
+		<li>Fully compatible: Firefox, IE7+, Opera 9.5, Safari, Netscape, Google Chrome, Camino, Flock 0.7+.</li>
+        <li>Support responsive website with layout Responsive</li>
+	</ul>
+	<h3>UPgrade versions</h3>
+	<p>
+		Your current versions is 1.2.8. <a target="_blank" href="http://bowthemes.com/joomla-extensions/bt-product-slider.html">Find our latest versions now</a>
+	</p>
+	<h3>Userful links</h3>
+	<ul>
+		<li><a target="_blank" href="http://bowthemes.com/joomla-extensions/bt-product-slider.html">Video tutorials</a></li>
+		<li><a target="_blank" href="http://bowthemes.com/forums/35-bt-product-slider/">Report bug</a></li>
+		<li><a target="_blank" href="http://bowthemes.com/forums/35-bt-product-slider/">Forum support</a></li>
+	</ul>
+	<h3>About bow themes & copyright</h3>
+	<p>Bow Themes is Professional Joomla template provider. We are
+		focused on creating unique, attractive and clean templates without
+		loosing flexibility and simplicity of customization</p>
+	Copyright (C) 2012 BowThemes
+</div>
+<style>
+.bt_description{
+	text-align: left;
+}	
+.bt_description h3 {
+	text-transform: uppercase;
+	margin: 20px 0px 10px 0px;
+}
+
+.bt_description img {
+	float: left;
+	margin: 5px 10px 5px 0px;
+}
+
+.bt_description p,.bt_description li {
+	padding: 5px 5px 5px 30px;
+	list-style: none outside none;
+}
+
+.bt_description ul.list-style li {
+	background: url(../modules/mod_bt_productslider/admin/images/tick.png)
+		0px 6px no-repeat;
+	padding-left: 30px;
+	line-height: 15px;
+}
+</style>
+]]>
+    </description>
+    <files>
+        <filename module="mod_bt_productslider">mod_bt_productslider.php</filename>
+        <filename module="mod_bt_productslider">index.html</filename>
+        <folder module="mod_bt_productslider">images</folder>
+        <folder module="mod_bt_productslider">classes</folder>
+        <folder module="mod_bt_productslider">assets</folder>
+        <folder module="mod_bt_productslider">tmpl</folder>
+        <folder module="mod_bt_productslider">admin</folder>
+        <folder module="mod_bt_productslider">helpers</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_bt_productslider.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="GLOBALSETTING">
+                <field name="moduleclass_sfx" type="text" default=""
+                       label="MODULE_CLASS_SUFFIX" description="MODULE_CLASS_SUFFIX_DESC" />
+                <field name="content_title" type="text" default=""
+                       label="CONTENT_TITLE" description="CONTENT_TITLE_DESC" />
+                <field name="content_title_link" type="text" default="" label="CONTENT_TITLE_LINK" description="CONTENT_TITLE_LINK_DESC"/>       
+                <field name="layout" type="layout" class="bt_control" default="default" label="MODULE_LAYOUT" description="MODULE_LAYOUT_DESC">        
+                </field>
+                <field type="spacer" name="GRID_SETTING" default="GRID_SETTING" />
+                <field class="layout_default layout_shopping layout_flipbook" name="items_per_cols" type="text" default="1" label="ITEMS_PER_COLS" description="ITEMS_PER_COLS_DESC"/>
+                <field class="layout_default layout_shopping" name="items_per_rows" type="text" default="3" label="ITEMS_PER_ROWS" description="ITEMS_PER_ROWS_DESC"/>
+                <field class="layout_accordion" name="items_per_page" type="text" default="5" label="ITEMS_PER_PAGE" description="ITEMS_PER_PAGE_DESC"/>
+				<field  class="layout_default layout_shopping layout_accordion " name="module_width" type="text" default="auto" label="MODULE_WIDTH"
+                       description="MODULE_WIDTH_DESC" />
+                <field class="layout_default layout_shopping layout_accordion" type="text" name="item_height" default="auto" label="ITEM_HEIGHT" description = "ITEM_HEIGHT"/>
+				
+				<field class="layout_accordion btn-group" name="show_arrow" type="radio" default="1" label="SHOW_ARROW" description="SHOW_ARROW_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field class="layout_accordion" name="arrow_position" type="radio" default="right" label="ARROW_POSITION" description="ARROW_POSITION_DESC"> 
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                </field>
+                <field class="layout_accordion btn-group" name="activate_first" type="radio" default="1" label="ACTIVATE_FIRST" description="ACTIVATE_FIRST_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field class="layout_default layout_shopping" name="item_min_width" type="text" default="200" label="ITEM_MIN_WIDTH" description="ITEM_MIN_WIDTH_DESC"/>
+                <field type="spacer" name="NAVIGATION_SETTING" default="NAVIGATION_SETTING" />
+                <field  class="layout_default layout_shopping layout_accordion" name="next_back_position" default="flanks" type="list" label="NEXT_BACK_POSITION" description="NEXT_BACK_POSITION_DESC">
+                    <option value="0">NEXT_BACK_POSITION_NONE</option>
+                    <option value="top">NEXT_BACK_POSITION_TOP</option>
+                    <option value="bottom">NEXT_BACK_POSITION_BOTTOM</option>
+                    <option value="flanks">NEXT_BACK_POSITION_FLANKS</option>
+                </field> 
+                <field  class="layout_default layout_shopping layout_accordion" name="navigation_type" type="list" default="bullet" label="NAVIGATION_TYPE" description="NAVIGATION_TYPE_DESC">
+                    <option value="bullet">NAVIGATION_TYPE_BULLET</option>
+                    <option value="number">NAVIGATION_TYPE_NUMBER</option>
+                </field>
+                <field class="layout_default layout_shopping layout_accordion" name="navigation_position" default="top" type="list" label="NAVIGATION_POSITION" description="NAVIGATION_POSITION_DESC">
+                    <option value="0">NAVIGATION_POSITION_NONE</option>
+                    <option value="top">NAVIGATION_POSITION_TOP</option>
+                    <option value="bottom">NAVIGATION_POSITION_BOTTOM</option>
+                </field>  
+				<field class="layout_flipbook btn-group" name="flipbook_pagenumber" type="radio" default="0" label="FLIPBOOK_PAGENUMBER" description="FLIPBOOK_PAGENUMBER_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+				<field class="layout_flipbook btn-group" name="flipbook_nextback" type="radio" default="1" label="FLIPBOOK_NEXTBACK" description="FLIPBOOK_NEXTBACK_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="source_setting" label="SOURCE_SETTING">
+                <field name="source" type="list" default="category" label="SOURCE_FROM" class="bt_control"
+                       description="SOURCE_FROM_DESC">
+                    <option value="vm_categories">VM_CATEGORIES</option>
+                    <option value="vm_ids">VM_IDS</option>
+                    <option value="js_categories">JS_CATEGORIES</option>
+                    <option value="js_ids">JS_IDS</option>
+                </field>
+                <field name="vm_categories" class="source_vm_categories" show_root="true" type="vmcategories" multiple="true" size="10" label="VM_CATEGORIES" description="VM_CATEGORIES_DESC" />
+                <field name="vm_ids" class="source_vm_ids" type="text" default="" label="VM_IDS" description="VM_IDS_DESC" />
+                <field name="js_categories" class="source_js_categories" type="jscategories" multiple="true" size="10" default="" label="JS_CATEGORIES" description="JS_CATEGORIES_DESC" />
+                <field name="js_ids" class="source_js_ids" type="text" default="" label="JS_IDS" />
+                
+                <field name="limit_items" type="text" default="12" label="LIMIT_ITEMS"
+                       description="LIMIT_ITEMS_DESC" />
+                <field name="limit_items_for_each" type="radio" class="btn-group" default="0" label="LIMIT_ITEMS_FOR_EACH" description="LIMIT_ITEMS_FOR_EACH_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                
+                <field name="group" type="list" default="" label="GROUP_PRODUCT" description="GROUP_PRODUCT_DESC">
+                    <option value="">GROUP_PRODUCT_NONE</option>
+                    <option value="featured">GROUP_PRODUCT_FEATURED</option>
+                    <option value="lastest">GROUP_PRODUCT_LASTEST</option>
+					<option value="bestsale">GROUP_PRODUCT_BEST_SALE</option>
+                </field>
+				<field name="jslabel" type="jslabel" default="" label="JSLABEL" description="JSLABEL_DESC">
+					
+				</field>
+                <field name="ordering" type="list" default="created_on-asc"
+                       label="PRODUCTS_SORTED_BY" description="PRODUCTS_SORTED_BY_DESC">
+                    <option value="id-asc">ID_ASCENDING</option>
+                    <option value="id-desc">ID_DESCENDING</option>
+					 <option value="price-asc">PRICE_ASCENDING</option>
+                    <option value="price-desc">PRICE_DESCENDING</option>
+                    <option value="ordering-asc">ORDERING_ASCENDING</option>
+                    <option value="ordering-desc">ORDERING_DESCENDING</option>
+                    <option value="hits-asc">HIT_ASCENDING</option>
+                    <option value="hits-desc">HIT_DESCENDING</option>
+                    <option value="modified_on-asc">MODIFIED_DATE_ASCENDING</option>
+                    <option value="modified_on-desc">MODIFIED_DATE_DESCENDING</option>
+                    <option value="rand-">RANDOM</option>
+                </field>
+            </fieldset>
+            <fieldset name="itemlayoutsetting" label="Item Layout Setting">
+                <field type="spacer" name="title_option" default="TITLE_OPTION" />
+                
+                <field name="show_title" type="radio" default="1" class="btn-group"
+                       label="SHOW_TITLE" description="SHOW_TITLE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="spacer" name="intro_text_option" default="INTRO_TEXT_OPTION" />
+                <field name="show_intro" type="radio" default="1" class="btn-group"
+                       label="SHOW_INTRO" description="SHOW_INTRO_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="limit_description_by" type="list" default="char"
+                       label="LIMIT_DESCRIPTION_BY" description="LIMIT_DESCRIPTION_BY_DESC">
+                    <option value="word">WORD</option>
+                    <option value="char">CHARACTER</option>
+                </field>
+                <field name="description_max_chars" type="text" default="100"
+                       label="DESCRIPTION_MAX_CHARS" description="DESCRIPTION_MAX_CHARS_DESC" />
+                       
+                <field type="spacer" name="category_name_option" default="CATEGORY_NAME_OPTION" />
+                <field name="show_category_name" type="radio" default="1"
+                       class="btn-group" label="SHOW_CATEGORY_NAME" description="SHOW_CATEGORY_NAME_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_category_name_as_link" type="radio" default="1"
+                       class="btn-group" label="SHOW_CATEGORY_NAME_AS_LINK" description="SHOW_CATEGORY_NAME_AS_LINK_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+                <field type="spacer" name="image_option" default="IMAGE_OPTION" />
+                <field name="show_image" type="radio" default="1" class="btn-group"
+                       label="SHOW_IMAGE" description="SHOW_IMAGE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="check_image_exist" type="radio" default="1" class="btn-group"
+                       label="CHECK_IMAGE_EXIST" description="CHECK_IMAGE_EXIST_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="image_align" type="list" default="center" label="IMAGE_ALIGN"
+                       description="IMAGE_ALIGN_DESC">
+                    <option value="left">Left</option>
+                    <option value="right">Right</option>
+                    <option value="center">Center</option>
+                </field>
+                <field name="image_thumb" type="radio" default="1" class="btn-group"
+                       label="IMAGE_THUMB" description="IMAGE_THUMB_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="thumbnail_width" type="text" default="180"
+                       label="THUMBNAIL_WIDTH" description="THUMBNAIL_WIDTH_DESC" />
+                <field name="thumbnail_height" type="text" default="120"
+                       label="THUMBNAIL_HEIGHT" description="THUMBNAIL_HEIGHT_DESC" />
+                <field name="default_thumb" type="radio" default="1" class="btn-group"
+                       label="DEFAULT_THUMB" description="DEFAULT_THUMB_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field type="spacer" name="orther_option" default="ORTHER_OPTION" />
+                <field name="show_price" type="radio" default="1" class="btn-group"
+                    label="SHOW_PRICE" description="SHOW_PRICE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_manufacturer" type="radio" default="0" class="btn-group"
+                       label="SHOW_MANUFACTURER" description="SHOW_MANUFACTURER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field name="show_rating" type="radio" default="1" class="btn-group" label="SHOW_RATING" description = "">
+					<option value="0">JNO</option>
+                    <option value="1">JYES</option>
+				</field>
+				<field name="star_width" type="text" default="18" label="STAR_WIDTH" description="STAR_WIDTH_DESC"/>
+				<field name="show_review_count" type="radio" default="1" class="btn-group"
+                       label="SHOW_REVIEW_COUNT" description="SHOW_REVIEW_COUNT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+				<field name="show_label" type="radio" default="1" class="btn-group"
+                       label="SHOW_LABEL" description="SHOW_LABEL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_view_details" type="radio" default="1" class="btn-group"
+                       label="SHOW_VIEW_DETAILS" description="SHOW_VIEW_DETAILS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_add_to_cart" type="radio" default="1" class="btn-group"
+                       label="SHOW_ADD_TO_CART" description="SHOW_ADD_TO_CART_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>                
+            </fieldset>
+            <fieldset name="effectsetting" label="Effect Setting">
+                <field name="hovereffect" type="radio" default="1" class="btn-group"
+                       label="IMAGE_THUMB_EFFECT" description="IMAGE_THUMB_EFFECT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field class="layout_default layout_shopping layout_accordion" name="slide_effect" type="list" label="SLIDE_EFFECT" description="SLIDE_EFFECT_DESC" default="scroll">
+                    <option value="scroll">SLIDE_EFFECT_SCROLL</option>
+                    <option value="fade">SLIDE_EFFECT_FADE</option>
+                </field>
+                <field class="layout_accordion" name="slide_direction" type="list" default="horizontal" label="SLIDE_DIRECTION" description="SLIDE_DIRECTION_DESC">
+                    <option value="horizontal">HORIZONTAL</option>
+                    <option value="vertical">VERTICAL</option>
+                </field>
+                
+                <field name="slide_item_per_time" class="layout_default layout_shopping layout_accordion" type="text" default="1" label="SLIDE_ITEM_PER_TIME" description="SLIDE_ITEM_PER_TIME_DESC"/>
+                <field name="pause_hover" class="btn-group" type="radio"
+                       default="1" label="PAUSE_HOVER_LABEL" description="PAUSE_HOVER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                
+                <field name="duration" type="text" default="500"
+                       label="ANIMATION_DURATION" description="ANIMATION_DURATION_DESC" />
+                
+                <field name="auto_start" type="radio" class="btn-group"
+                       default="1" label="AUTO_START" description="AUTO_START_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="interval" type="text" default="3" label="INTERVAL"
+                       description="INTERVAL_DESC" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field class="btn-group" name="auto_strip_tags" type="radio"
+                       default="1" label="STRIP_TAGS" description="STRIP_TAGS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="allow_tags" type="list" default="" multiple="multiple"
+                       label="ALLOW_TAGS" description="ALLOW_TAGS_DESC">
+                    <option value="a">Link</option>
+                    <option value="img">Image</option>
+                    <option value="b">Bold</option>
+                    <option value="i">Italic</option>
+                    <option value="font">Font</option>
+                    <option value="br">Newline</option>					
+                </field>
+                <field name="open_target" type="list" default="_parent"
+                       label="CLICK_LINK_OPEN_IN" description="CLICK_LINK_OPEN_IN_DESC">
+                    <option value="_blank">New window</option>
+                    <option value="_parent">Parent window</option>
+                </field>
+                <field name="loadJquery" type="list" default="auto" label="BT_LOADJQUERY"
+                       description="BT_LOADJQUERY_DESC">
+                    <option value="auto">Auto</option>
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="cache" type="list" default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field addfieldpath="/modules/mod_bt_productslider/admin/formfield" type="asset" name="asset" path="modules/mod_bt_productslider/admin/" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

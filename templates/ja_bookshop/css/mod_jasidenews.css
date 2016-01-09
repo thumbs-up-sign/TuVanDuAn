@@ -1,0 +1,161 @@
+.ja-slidenews-item {
+  border-bottom: 1px dotted #ccc;
+  clear: both;
+  float: left;
+  padding: 8px 0;
+  width: 100%;
+}
+.ja-slidenews-item .ja-title {
+  display: block;
+  font-weight: bold;
+}
+.ja-slidenews-item .ja-createdate {
+  color: #666;
+  font-size: 92%;
+  font-weight: bold;
+  padding: 2px 5px 2px 0;
+}
+.ja-sidenews-title {
+  font-weight: bold;
+}
+.ja-sidenews-postdate {
+  font-size: 85%;
+}
+
+.ja-sidenews {
+  cursor: pointer;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.ja-sidenews-display {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.ja-sidenews-desc {
+  padding: 5px 10px;
+}
+.ja-sidenews-desc h3 {
+  line-height: 1.4;
+}
+.ja-slidenews-cover {
+  bottom: 0;
+  float: left;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+.ja-slidenews-item img {
+  margin-right: 10px;
+  margin-top: 3px;
+  border: 0;
+}
+.ja-slidenews-item img[align="left"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+}
+.ja-slidenews-item img[align="right"] {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+.ja-tab-subcontent .ja-slidenews-item img[align="left"],
+.ja-tab-subcontent .ja-slidenews-item img[align="right"] {
+  float: none;
+  margin-right: 0;
+  margin-left: 0;
+}
+.t3-module.highlight .ja-sidenews-list {
+  margin: 0 -5px;
+}
+.t3-module.highlight .ja-slidenews-item {
+  width: 33.3%;
+  border-bottom: 0;
+  clear: none;
+  padding: 0 5px;
+}
+.t3-module.highlight .ja-slidenews-item .ja-title,
+.t3-module.highlight .ja-slidenews-item .ja-createdate,
+.t3-module.highlight .ja-slidenews-item .description {
+  display: none;
+}
+.t3-module.highlight .ja-slidenews-item .ja-title {
+  color: #ffffff;
+  font-family: 'Roboto Slab', Georgia, Times, serif;
+}
+.t3-module.highlight .ja-slidenews-item .ja-title:hover,
+.t3-module.highlight .ja-slidenews-item .ja-title:focus,
+.t3-module.highlight .ja-slidenews-item .ja-title:active {
+  color: #f0141e;
+  text-decoration: none;
+}
+.t3-module.highlight .ja-slidenews-item img[align="left"] {
+  margin: 0;
+  border: 0;
+  max-width: 100%;
+}
+.t3-module.highlight .ja-slidenews-item:first-child {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #383838;
+  color: #666;
+}
+.t3-module.highlight .ja-slidenews-item:first-child .ja-title,
+.t3-module.highlight .ja-slidenews-item:first-child .ja-createdate,
+.t3-module.highlight .ja-slidenews-item:first-child .description {
+  display: block;
+}
+.t3-module.highlight .ja-slidenews-item:first-child img[align="left"] {
+  border: 0;
+  margin-left: -5px;
+  margin-right: 15px;
+  padding: 0 5px;
+  width: 33.3%;
+}
+.col-6 .ja-sidenews-list {
+  margin: 0 -15px;
+}
+.col-6 .ja-slidenews-item {
+  clear: none;
+  width: 16.6667%;
+  padding: 0 15px;
+  border-bottom: 0;
+}
+.col-6 .ja-slidenews-item .ja-slidenews-image {
+  position: relative;
+  margin: 0 0 10px;
+}
+.col-6 .ja-slidenews-item .ja-slidenews-image .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+.col-6 .ja-slidenews-item img[align="left"] {
+  border: 0;
+  float: none;
+}
+.col-6 .ja-slidenews-item .ja-title {
+  color: #000000;
+  display: block;
+  font-family: 'Roboto Slab', Georgia, Times, serif;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+}
+.col-6 .ja-slidenews-item:hover .ja-title {
+  color: #f0141e;
+  text-decoration: none;
+}
+.col-6 .ja-slidenews-item:hover .ja-slidenews-image .btn {
+  display: block;
+}

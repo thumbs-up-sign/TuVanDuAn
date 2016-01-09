@@ -1,0 +1,292 @@
+/*======= BT CONTENT SHOWCASE ========*/
+
+.shoppingLayout .bt-productslider {
+    position: relative;
+    border: none;
+  	background: #ffffff;
+  	padding: 10px;
+}
+
+.shoppingLayout .bt-productslider a:hover {
+    background-color: #fff;
+    color: #363636;
+}
+
+.shoppingLayout .slides_container {
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+}
+
+.shoppingLayout .bt-productslider h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: left !important;
+  	background: #c31d1d;
+  	float: left;
+  	padding: 0px 10px;
+    border: 1px solid #cfcfcf;
+    margin: 0 !important;
+  	font-family: "Oswal", "Arial", "Tahoma";
+	height: 32px; line-height: 32px;
+  
+}
+.shoppingLayout .bt-productslider h3 a{
+    color: #ffffff;
+  	text-decoration: none;
+}
+
+.shoppingLayout p.bt-readmore {
+    text-align: left;
+    clear:both;
+}
+
+.shoppingLayout p.bt-readmore a {
+    color: #d67900;
+}
+
+.shoppingLayout p.bt-readmore a:hover,.shoppingLayout p.bt-readmore a:active {
+    background: #ffffff;
+}
+.shoppingLayout .bt-container {
+    position: relative;
+}
+/* main flash */
+.shoppingLayout .bt-main-wapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.shoppingLayout .bt-main-wapper .bt-main-item {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.shoppingLayout .bt-row {
+    position: relative;
+    overflow: hidden;
+    padding: 3px 4px 10px 4px;
+    float: left;
+}
+
+.shoppingLayout .bt-row .bt-product-label{
+	width: 80px; height: 80px;
+	position: absolute; top: 0; left: 0;
+	z-index: 1;
+}
+
+
+/*** CSS STYLE FOR ITEM ****/
+.shoppingLayout .bt-inner {
+    position: relative;
+}
+
+.shoppingLayout .bt-inner a {
+    text-decoration: none;
+}
+
+.shoppingLayout .bt-inner img {
+    width: 100%;
+}
+
+.shoppingLayout .bt-inner .bt-title {
+    padding: 0 0px 10px 0px;
+    line-height: 24px;
+    color: #f0141e;
+	font-size: 14px;
+}
+.shoppingLayout .bt-inner .bt-title:hover{
+	color: #c31d1d;
+}
+
+.shoppingLayout .bt-inner .bt-category {
+    color: #282828;
+    font-weight: bold;
+	font-size: 12px;
+}
+
+.shoppingLayout .bt-inner .bt-category:hover {
+    color: #c31d1d;
+    font-weight: bold;
+}
+
+.shoppingLayout .bt-inner .bt-introtext {
+
+    margin: 5px 0px 5px 0px;
+    font-size: 12px; line-height: 24px;
+}
+.shoppingLayout .bt-inner .bt-introtext img {
+    margin: 5px 0px;
+
+}
+.shoppingLayout .bt-extra {
+    margin-top: 5px;
+	font-weight: normal;
+    font-size: 11px;
+	color: #b2b2b2;
+	text-align: right;
+}
+
+.shoppingLayout .bt-row-bottom{
+	width: 100%;
+	height: 65px;
+
+}
+.shoppingLayout .bt-addtocart,
+.shoppingLayout .bt-viewdetails{
+	width: 25%;
+	height: 65px;
+	border: none;
+	border-right: 1px solid #a1a1a1;
+	float: left;
+	display: block;
+	text-indent: -9999px;
+}
+.shoppingLayout .bt-addtocart{
+	background:  #8a8a8a url("../images/cart.png") center center no-repeat;
+}
+.shoppingLayout .bt-viewdetails{
+	background: #8a8a8a url("../images/details.png") center center no-repeat;
+}
+.shoppingLayout .bt-addtocart:hover,
+.shoppingLayout .bt-viewdetails:hover{
+	background-color: #696969 !important;
+}
+.shoppingLayout .bt-prices{
+    
+	height: 65px;
+	width: auto;
+	background-color: #c31d1d;
+	color: #ffffff;	
+	text-align: right;
+}
+.shoppingLayout .no-old{
+	line-height: 65px;
+}
+.shoppingLayout .bt-prices-oldPrice{
+    text-decoration: line-through;
+    font-size: 14px;
+	line-height: 24px;
+    padding-top: 5px;
+	display: block;
+	padding-right: 17px;
+}
+.shoppingLayout .bt-prices-salesPrice{
+    font-size: 22px;
+	font-size: "Oswald", Arial;
+	display: block;
+	padding-right: 17px;
+	
+}
+.shoppingLayout .bt-buttons .bt-buttons-wrapper{
+    width: 180px;
+    margin:auto;
+}
+
+
+.shoppingLayout .bt-row-separate {
+    clear: both;
+    height: 1px;
+    border-bottom: 1px dotted #959595;
+    margin: 0px 10px;
+    margin-bottom: 15px;
+}
+
+.shoppingLayout .bt-productslider ul li{
+    display: block;
+}
+
+/*
+        Next/prev buttons
+*/
+.shoppingLayout .btproductslider-prev,
+.shoppingLayout .btproductslider-next {
+    display: block;
+    width: 32px;
+    height: 32px;
+	cursor: pointer;
+	text-indent: -9999px;
+	float: right;
+	z-index:1;
+}
+.shoppingLayout .btproductslider-next {
+  background: #282828 url("../images/next.png") center center no-repeat;
+}
+.shoppingLayout .btproductslider-next:hover{
+  background-color: #c31d1d;
+}
+.shoppingLayout .btproductslider-prev {
+  background: #282828 url("../images/previous.png") center center no-repeat;
+  margin-right: 5px;
+}
+.shoppingLayout .btproductslider-prev:hover{
+  background-color: #c31d1d;
+}
+
+.shoppingLayout  #btproductslider-control{
+    margin: 5px 0px;
+    width: 100%;
+}
+.shoppingLayout .btproductslider-navigation{
+    float: right;
+    margin: 1px 3px;
+}
+.shoppingLayout .btproductslider-navigation{
+    float: right;
+    margin: 1px 3px;
+}
+.shoppingLayout .btproductslider-navigation .bullet{
+    background-image: url("../images/bullet.png");
+    background-position: 0 0;
+    display: block !important;
+    float: left;
+    height: 12px;
+    overflow: hidden;
+    width: 12px;
+    text-indent: 9999px;
+    margin: 0px 1px;
+}
+.shoppingLayout .btproductslider-navigation .bullet:hover,
+.shoppingLayout .btproductslider-navigation .bullet.current{
+    background-position: 0 12px;
+}
+.shoppingLayout .btproductslider-navigation a{
+    text-decoration: none !important;
+}
+
+.shoppingLayout .btproductslider-navigation .number{
+    background-image: url("../images/number.png"); background-position: 0 14px;
+    display: block !important;
+    float: left;
+    width: 14px; height: 14px; line-height: 13px;
+    margin: 0 1px;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff; font-weight: bold; font-size: 10px;
+}
+.shoppingLayout .btproductslider-navigation .number:hover,
+.shoppingLayout .btproductslider-navigation .number.current{
+    background-position: 0 0;
+}
+
+.shoppingLayout .vote{
+	float: left;
+}
+.shoppingLayout .ratingbox {
+	position:relative;
+	display:block;
+	width:90px;
+	height:16px;
+	background:url("../images/stars.png") repeat-x scroll 0 bottom transparent;
+}
+.shoppingLayout .ratingbox span {
+	background:url(../images/stars.png) repeat-x;
+	display:block;
+	width:1%;
+	height:16px;
+	position:absolute;
+}
