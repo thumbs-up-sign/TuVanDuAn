@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5.0" group="system" method="upgrade">
+	<name>System - Van Vietnamese Alias</name>
+	<author>VIAN</author>
+	<creationDate>2012-06-17</creationDate>
+	<copyright>Copyright (C) 2010-2012 VIAN. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@vian.vn</authorEmail>
+	<authorUrl>http://vian.vn</authorUrl>
+	<version>2.5.0</version>
+	<description><![CDATA[
+	<p>Vian Vietnamese Alias (VietAlias) là Plugin tạo trường bí danh (Alias)và đường link của bài viết,hoặc của bất kỳ một đối tượng nào khác (menu, category, banner, weblink...) trong Joomla bằng chuỗi tiếng Việt không dấu, chữ thường cach nhau bang dau "-". VD: Nếu tiêu đề là: `Giới thiệu công ty` thì (alias) là: `gioi-thieu-cong-ty` chi tiết hướng dẫn update <a href="http://vian.vn/kho-tai-lieu/278-plugin-sua-loi-alias-tieng-viet-joomla-25x-30x.html" target="_blank"> tại đây.</a> 
+	</p>
+	]]>
+	</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>output.php</filename>		
+		<filename plugin="vian_vietalias">vian_vietalias.php</filename>
+	</files>
+	<media folder="media" destination="plg_system_vian_vietalias">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="active_on" type="radio" default="1" label="Bật trên tất cả các trang" description="Bật sử dụng plug trên tất cả các trang / components" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="active_on_specific" type="textarea" rows="7" cols="30" default="com_content,com_categories,com_menus,com_banners,com_contact,com_newsfeeds,com_weblinks" label="Trên trang lựa chọn" description="Bật sử dụng plugin trên các trang lựa chon và components" />
+				<field name="auto_complete" type="radio" default="1" label="Tự động sử dụng (ajax)" description="Tự động hoàn thành các trường Alias ​​khi bạn gõ tiêu đề tiếng Việt" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="auto_complete_on_specific" type="textarea" rows="7" cols="30" default="com_content,com_menus,..." label="Trên components lựa chọn" description="Tự động hoàn thành trường Alias ​​trên các trang / thành phần cụ thể khi bạn gõ tiêu đề tiếng Việt" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
