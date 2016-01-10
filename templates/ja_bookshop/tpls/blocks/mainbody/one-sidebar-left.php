@@ -29,6 +29,7 @@ defined('_JEXEC') or die;
 		<!-- //MAIN CONTENT -->
 
 		<!-- SIDEBAR LEFT -->
+		<!-- Commend for left side bar PhuND -->
 		<div class="t3-sidebar t3-sidebar-left col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9 <?php $this->_c($vars['sidebar']) ?>">
 			<jdoc:include type="modules" name="<?php $this->_p($vars['sidebar']) ?>" style="T3Xhtml" />
 		</div>
