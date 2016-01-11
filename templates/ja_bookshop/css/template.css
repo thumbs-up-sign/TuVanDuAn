@@ -1320,6 +1320,23 @@ html .pagination .pagination {
   color: #333333;
   font-family: 'arial', Georgia, Times, serif;
 }
+
+.t3-sidebar .t3-module ul > li.item-683 > a {
+    padding: 5px;
+    display: block;
+    color: #ffffff;
+    font-family: 'arial', Georgia, Times, serif;
+    background: #780003;
+}
+
+.t3-sidebar .t3-module ul > li.item-719 > a {
+    padding: 5px;
+    display: block;
+    color: #ffffff;
+    font-family: 'arial', Georgia, Times, serif;
+    background: #780003;
+}
+
 .t3-sidebar-1 .t3-module ul > li > a:hover,
 .t3-sidebar .t3-module ul > li > a:hover,
 .t3-sidebar-1 .t3-module ul > li > a:focus,
