@@ -423,7 +423,7 @@ samp {
 }
 .features-list {
   margin-top: 60px;
-  
+
 }
 .features-list .page-header {
   border: 0;
@@ -861,14 +861,14 @@ ul.ngang {
     height: 39px;
 }
 ul.ngang li {
-	float: left;
-	padding: 0px 15px;
-	margin-top: 0px !important;
-	}
+    float: left;
+    padding: 0px 15px;
+    margin-top: 0px !important;
+}
 ul.ngang li a {
     font-size: 14px;
     padding: 8px 15px;
-	color: #FFF;
+    color: #FFF;
     font-weight: bold;
 }
 .breadcrumb {
@@ -1319,6 +1319,10 @@ html .pagination .pagination {
   display: block;
   color: #333333;
   font-family: 'arial', Georgia, Times, serif;
+  background-image:url(../images/arrow.png);
+  background-repeat:no-repeat;
+  background-position:0px 10px;
+  padding-left:14px;
 }
 
 .t3-sidebar .t3-module ul > li.item-683 > a,
@@ -1332,11 +1336,11 @@ html .pagination .pagination {
 .t3-sidebar .t3-module ul > li.item-787 > a,
 .t3-sidebar .t3-module ul > li.item-797 > a
 {
-    padding: 5px;
-    display: block;
-    color: #ffffff;
-    font-family: 'arial', Georgia, Times, serif;
-    background: #780003;
+  padding: 5px;
+  display: block;
+  color: #ffffff;
+  font-family: 'arial', Georgia, Times, serif;
+  background: #780003;
 }
 
 .t3-sidebar-1 .t3-module ul > li > a:hover,
@@ -4193,7 +4197,7 @@ img {
 }
 @media (min-width: 920px) {
   .t3-mainbody.has-sidebar-left.has-col-md-3 {
-	background: #FFF;
+    background: #FFF;
     /*background: url("../images/dot.gif") repeat-y 25% top #ffffff;*/
   }
   .t3-mainbody.has-sidebar-left.has-col-md-3:before {
@@ -4994,12 +4998,12 @@ html body #recaptcha_area .recaptchatable a:hover {
 }
 .vmgroup4 ul li {
     float: left;
-	height:300px;
+    height:300px;
     width: 24.6667%;
     list-style: none;
-	padding: 0px 10px;
+    padding: 0px 10px;
     margin: 10px 0px;
-	}
+    }
 @media screen and (min-width: 980px) and (max-width: 1380px) {
 li.width25 a img {
     width: 154px;
@@ -5026,7 +5030,7 @@ span#btl-panel-login, span#btl-panel-registration {
     margin: 0px !important;
     font-size: 13px;
     font-family: 'Roboto Slab', Georgia, Times, serif;
-	line-height: 40px !important;
+    line-height: 40px !important;
 }
 span#btl-panel-profile {
     box-shadow: none !important;
