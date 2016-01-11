@@ -1321,15 +1321,17 @@ html .pagination .pagination {
   font-family: 'arial', Georgia, Times, serif;
 }
 
-.t3-sidebar .t3-module ul > li.item-683 > a {
-    padding: 5px;
-    display: block;
-    color: #ffffff;
-    font-family: 'arial', Georgia, Times, serif;
-    background: #780003;
-}
-
-.t3-sidebar .t3-module ul > li.item-719 > a {
+.t3-sidebar .t3-module ul > li.item-683 > a,
+.t3-sidebar .t3-module ul > li.item-719 > a,
+.t3-sidebar .t3-module ul > li.item-729 > a,
+.t3-sidebar .t3-module ul > li.item-741 > a,
+.t3-sidebar .t3-module ul > li.item-751 > a,
+.t3-sidebar .t3-module ul > li.item-680 > a,
+.t3-sidebar .t3-module ul > li.item-765 > a,
+.t3-sidebar .t3-module ul > li.item-775 > a,
+.t3-sidebar .t3-module ul > li.item-787 > a,
+.t3-sidebar .t3-module ul > li.item-797 > a
+{
     padding: 5px;
     display: block;
     color: #ffffff;
@@ -1345,7 +1347,7 @@ html .pagination .pagination {
 .t3-sidebar .t3-module ul > li > a:active,
 .t3-sidebar-1 .t3-module ul > li > a.active,
 .t3-sidebar .t3-module ul > li > a.active {
-  color: #f0141e;
+  color: #000000;
   text-decoration: none;
 }
 .t3-sidebar-1 .t3-module ul > li:first-child,
