@@ -77,11 +77,14 @@
 		});
 
 		$('.hidden-sm').each(function() {
-			$(this).removeClass('hidden-sm');
+			var check_toolbar = $(this).hasClass('toolbar-ct');
+			if (!check_toolbar) $(this).removeClass('hidden-sm');
 		});
 
 		$('.hidden-xs').each(function() {
-			$(this).removeClass('hidden-xs');
+			var check_toolbar = $(this).hasClass('toolbar-ct');
+			var check_logo = $(this).hasClass('footer-logo');
+			if (!check_toolbar && !check_logo) $(this).removeClass('hidden-xs');
 		});
 	});
 	
